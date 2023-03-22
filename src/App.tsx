@@ -7,11 +7,12 @@ import { IBooksResponse } from "./types/dats"
 const App: React.FC = () => {
 
     const [data, setData] = useState<IBooksResponse | null>(null)
+    const [loader, setLoader ] = useState<boolean>(false)
 
     return (
         <>
-            <Header data={data} setData={setData} />
-            <Body data={data} setData={setData}/>
+            <Header data={data} setData={setData} setLoader={setLoader} />
+            <Body data={data} setData={setData} loader={loader} />
         </>
     )
 }

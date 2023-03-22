@@ -8,7 +8,7 @@ const BooksBox: React.FC<IData> = ({ data, setData }) => {
         <div className="booksBox">
             {data && data.items.map(el =>
                 <BookElement
-                    key={el.id}
+                    key={el.etag}
                     title={el.volumeInfo.title}
                     image={el.volumeInfo.imageLinks?.thumbnail}
                     authors={el.volumeInfo.authors}

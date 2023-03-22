@@ -17,6 +17,7 @@ interface IBookInfo {
   
 interface IBook {
     id: string;
+    etag: string;
     volumeInfo: IBookInfo;
 }
 
@@ -26,12 +27,24 @@ export interface IBooksResponse {
 }
 
 export interface IBooksApi {
-    getBooks: (searchTerm: string) => Promise<IBooksResponse>;
+    getBooks: (searchTerm: string, category: string, sort: string) => Promise<IBooksResponse>;
 }
 
 export interface IData{
     data: IBooksResponse | null;
     setData: (data: IBooksResponse) => void;
+}
+
+export interface IDataSetLoad extends IData{
+    data: IBooksResponse | null;
+    setData: (data: IBooksResponse) => void;
+    setLoader: (loader: boolean) => void;
+}
+
+export interface IDataLoad extends IData{
+    data: IBooksResponse | null;
+    setData: (data: IBooksResponse) => void;
+    loader: boolean;
 }
 
 export interface IBookElement{
