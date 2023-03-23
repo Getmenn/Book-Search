@@ -20,7 +20,13 @@
         img{
             width: 138px;
             height: 201px;
-            box-shadow: 8px 7px 9px #62606070
+            box-shadow: 8px 7px 9px #62606070;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.6;
+                transition: opacity 0.3s ease-in-out;
+            }
         }
     }
 
@@ -31,6 +37,11 @@
     h4{
         margin-top: 14px;
         margin-bottom: 8px;
+        cursor: pointer;
+
+        &:hover{
+            color: #15103d;
+        }
     }
 
     .underline{

@@ -1,20 +1,23 @@
 import './bookElement.scss'
-import bookImg from '../../../../assets/book.jpg'
 import { IBookElement } from '../../../../types/dats'
 
-
-
-const BookElement: React.FC<IBookElement> = ({title, image, authors, categories}) => {
+const BookElement: React.FC<IBookElement> = ({title, image, authors, categories, etag, handleOpenPage}) => {
+    
+    console.log(title.length);
     
     return (
         <div className="booksElement">
-            <div className="imageBox">
-                <img src={image} alt="book" />
+            <div className="imageBox" onClick={() => handleOpenPage(etag)}>
+                {image ? <img src={image} alt="book" /> : <h3>No image</h3>}
             </div>
             <span className='underline'>{(categories && categories[0]) || undefined}</span>
-            <h4>{title}</h4>
+            <h4
+                onClick={() => handleOpenPage(etag)}
+                style={{fontSize: title.length > 100 ? '14px' : '16px'}}
+            >
+                {title}
+            </h4>
             <span>{authors?.join(', ') || undefined}</span>
-            
         </div>
     )
 }

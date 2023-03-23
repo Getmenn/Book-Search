@@ -1,18 +1,17 @@
 import './searchBook.scss'
 import serchGlass from '../../../assets/searchGlass.svg'
-import { IDataSetLoad } from '../../../types/dats'
-import { useEffect, useRef, KeyboardEvent, useState } from 'react'
+import { ISetLoader } from '../../../types/dats'
+import { useRef, KeyboardEvent, useState } from 'react'
 import { BooksApi } from '../../../API/BooksApi'
+import { useDispatch } from 'react-redux'
+import { loadTotal, newBooks } from '../../../Redux/mainReducer'
 
-const SearchBook: React.FC<IDataSetLoad> = ({ data, setData, setLoader}) => {
+const SearchBook: React.FC<ISetLoader> = ({ setLoader }) => {
 
     const searchRef = useRef<(HTMLInputElement)>(null)
     const [category, setCategory] = useState<string>('all')
     const [sort, setSort] = useState<string>('relevance')
-
-    useEffect(() => {
-        //BooksApi.getBooks('js')
-    }, [])
+    const dispatch = useDispatch()
 
     const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>):void => {
         if (event.key === 'Enter') { 
@@ -24,7 +23,9 @@ const SearchBook: React.FC<IDataSetLoad> = ({ data, setData, setLoader}) => {
         if (searchRef.current) {
             setLoader(true)
             const response = await BooksApi.getBooks(searchRef.current.value, category, sort)
-            setData(response)
+            localStorage.setItem('serchParams', JSON.stringify([searchRef.current.value, category, sort]))
+            dispatch(newBooks(response.items))
+            dispatch(loadTotal(response.totalItems))
             setLoader(false)
         } 
     }
