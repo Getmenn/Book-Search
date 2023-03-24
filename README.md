@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Book-search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://img.shields.io/npm/v/react?label=React&style=flat-square) ![](https://img.shields.io/npm/v/sass?label=sass&style=flat-square) ![](https://img.shields.io/npm/v/react-redux?label=React-redux&style=flat-square) ![](https://img.shields.io/npm/v/axios?label=axios&style=flat-square) ![](https://img.shields.io/npm/v/typescript?label=typescript&style=flat-square):sunglasses:
 
-## Available Scripts
+**The client part**<br /><br />
+The application contains several pages and implements the following mechanism:
+1. The user enters text in the search field, presses the "Search" button or Enter. Selects the required filters.
+2. The request is sent to the Google Books API.
+3. Search results are displayed on the page.
 
-In the project directory, you can run:
+To go to the detailed page, the user must click on the picture or title of the book.
 
-### `npm start`
+## Functions⚡
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Text field and search button.
+2. Filtering by categories.
+3. Sorting.
+4. Found books are displayed as cards, each of which consists of a book cover image, book title, category name, and author names.
+5. Above the block with cards, the number of books found by request is displayed.
+6. Pagination is implemented according to the 'load more' principle. Pagination step - 28. I did this because 4 cards in a row look better.
+7. When you click on the card, you go to the detailed page of the book.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![screenshot](https://github.com/Getmenn/Book-search/blob/master/src/assets/Screenshot_2.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Site
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+link: https://getmenn.github.io/Book-search/
