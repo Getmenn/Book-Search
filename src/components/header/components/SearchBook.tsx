@@ -20,7 +20,7 @@ const SearchBook: React.FC<ISetLoader> = ({ setLoader }) => {
     }
     
     const handleSearch = async() => {
-        if (searchRef.current) {
+        if (searchRef.current && searchRef.current.value.length > 0) {
             setLoader(true)
             const response = await BooksApi.getBooks(searchRef.current.value, category, sort)
             localStorage.setItem('serchParams', JSON.stringify([searchRef.current.value, category, sort]))
