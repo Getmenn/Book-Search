@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux/es/exports';
 import {App} from './App';
 import { store } from './Redux/index';
+import './media.scss'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

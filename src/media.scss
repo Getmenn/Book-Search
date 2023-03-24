@@ -1,0 +1,122 @@
+@media (max-width: 1400px){
+    body{
+        .body{
+            .singleBookPage{
+                .imageContainer{
+                    min-width: unset;
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 1050px){
+    body{
+        .body{
+            .singleBookPage{
+
+                .textContainer{
+
+                    .bookAnnotation{
+                        font-size: 15px;
+                    }
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 900px){
+    body{
+        .body{
+            .singleBookPage{
+
+                .imageContainer{
+                    min-width: unset;
+
+                    img{
+                        width: 249px;
+                        height: 360px;
+                    }
+                }
+
+                .textContainer{
+
+                    .bookAnnotation{
+                        font-size: 14px;
+                    }
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 662px){
+    body{
+        .body{
+            .booksBox{
+                justify-content: space-around;
+            }
+
+            .singleBookPage{
+                flex-direction: column;
+
+                .imageContainer{
+                    img{
+                        width: 194px;
+                        height: 272px;
+                    }
+                }
+               
+
+                .textContainer{
+
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 625px){
+    body{
+        .header{
+
+            .searchBox{
+                width: 450px;
+
+                .sortBox{
+                    display: flex;
+                    flex-direction: column;
+
+                    select:first-of-type{
+                        margin: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            } 
+        }
+
+        .body{
+            .booksBox{
+                justify-content: space-around;
+
+                .loadMore{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 430px){
+    body{
+        .header{
+            .searchBox{
+                width: 310px;
+            } 
+        }
+    }
+}
