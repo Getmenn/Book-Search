@@ -17,7 +17,7 @@ To go to the detailed page, the user must click on the picture or title of the b
 3. Sorting.
 4. Found books are displayed as cards, each of which consists of a book cover image, book title, category name, and author names.
 5. Above the block with cards, the number of books found by request is displayed.
-6. Pagination is implemented according to the 'load more' principle. Pagination step - 28. I did this because 4 cards in a row look better.
+6. Pagination is implemented according to the 'load more' principle. **Pagination step - 28. I did this because 4 cards in a row look better.**
 7. When you click on the card, you go to the detailed page of the book.
 
 ## Screenshots
