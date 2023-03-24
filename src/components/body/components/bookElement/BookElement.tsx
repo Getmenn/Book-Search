@@ -3,8 +3,6 @@ import { IBookElement } from '../../../../types/dats'
 
 const BookElement: React.FC<IBookElement> = ({title, image, authors, categories, etag, handleOpenPage}) => {
     
-    console.log(title.length);
-    
     return (
         <div className="booksElement">
             <div className="imageBox" onClick={() => handleOpenPage(etag)}>
